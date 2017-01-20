@@ -1,0 +1,13 @@
+# Rules for creating Lattice Device entries for PCIe Eval Boards.
+#
+# See the udev man page for a full description of them.
+# See the udev.rules.examples file for more examples of how to create rules
+#
+# Note: for udev versions below 050 (???) the test rule is a single '='
+# so you may need to modify these rule lines to be
+# KERNEL="SC_Basic*" if using on 2.6.9 kernels
+#
+
+KERNEL=="ECP3_Basic*", NAME="lscpcie2/%k", MODE="0666"
+KERNEL=="ECP3_SFIF*", NAME="lscpcie2/%k", MODE="0666"
+
